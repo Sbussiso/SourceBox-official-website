@@ -1,0 +1,138 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+<br/>
+<br/>
+<h1 align="center">Welcome to the premium info page!</h1>
+<br/>
+
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    Featured
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Why Premium?</h5>
+                    <p class="card-text">Get the most out of SourceBox and fund free projects for others. SourceBox is a platform dedicated to providing free open source solutions. By signing up you are supporting the growth of our platform and ongoing maintenance of our applications and services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br/>
+<h3 align="center">Benefits</h3>
+<div id="carouselExample" class="carousel slide" align="center"> <!-- Start carousel -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="p-5 mb-4 rounded-3 border">
+                            <h2>Never worry about losing your data again</h2>
+                            <p>With premium your data is optionally stored in our secure database</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="p-5 mb-4 rounded-3 border">
+                            <h2>Get priority support before everyone else</h2>
+                            <p>With premium, your needs come first.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="p-5 mb-4 rounded-3 border">
+                            <h2>Higher data limits</h2>
+                            <p>LLMs are naturally very data expensive. With premium, you get to use more!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> <!-- End carousel -->
+
+<br/>
+<h3 align="center">Compare</h3>
+<div class="container"> <!-- Start container for comparison section -->
+    <div class="row justify-content-center"> <!-- Row for centering comparison cards -->
+        <div class="col-md-3"> <!-- Column for Basic card -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body" align="center">
+                    <h5 class="card-title">Basic</h5>
+                    <p class="card-text">temporary data storage</p>
+                    <p class="card-text">limited support</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 mb-5"> <!-- Column for Premium card -->
+            <div class="card" style="width: 18rem;">
+                <div class="card-body" align="center">
+                    <h5 class="card-title">Premium</h5>
+                    <p class="card-text">SourceBox data storage</p>
+                    <p class="card-text">Priority customer support</p>
+                </div>
+            </div>
+            <br/>
+            <div class="d-grid gap-2 ms-1 me-3">
+                <button class="btn btn-primary p-2" type="button" data-bs-toggle="modal" data-bs-target="#submissionModal">Upgrade to Premium</button>
+            </div>
+        </div>
+    </div>
+</div> <!-- End container for comparison section -->
+
+<!-- Modal -->
+<div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Coming soon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                SourceBox premium will be here before you know it!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('confirmSubmit').addEventListener('click', function() {
+        var form = document.querySelector('form');
+        form.submit(); // Submit the form
+    });
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+            var filename = this.getAttribute('data-filename');
+            var downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = `/download_plate/${filename}`;
+            var dropdownButton = document.getElementById('dropdownMenuButton');
+            dropdownButton.textContent = this.textContent;
+        });
+    });
+</script>
+{% endblock %}

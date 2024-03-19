@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<br/>
+<div class="container text-center">
+    <div class="row">
+        <div class="col">
+            <h1>All open source, right out of the box!</h1>
+            <p>(some quote and/or mission statement)</p>
+            <a href="/dashboard"><button type="button" class="btn btn-primary">Dashboard</button></a>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Whats new?</h5>
+                    <p class="card-text">Check here for updates on improvements and upcoming content!</p>
+                    <a href="/updates" class="btn btn-primary">See what's new</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Demos</h5>
+                    <p class="card-text">Use SourceBox demos to quickly chat with chatbots using your own custom data and more!</p>
+                    <a href="/demos" class="btn btn-primary">Try Demos</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Documentation</h5>
+                    <p class="card-text">Look through the SourceBox documentation to get started, get help, and more!</p>
+                    <a href="/docs" class="btn btn-primary">Open Docs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br/>
+<br/>
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner" align="center">
+        <div class="carousel-item active">
+            <h4>Start working with your own data instantly</h4>
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="p-5 mb-4 rounded-3 border">
+                            <form method="POST" enctype="multipart/form-data" action="/llama-content">
+                                <div class="form-group">
+                                    <label for="fileToUpload" class="p-4">Fetch your data:</label>
+                                    <input type="file" name="file" id="file">
+                                    <label for="prompt"></label>
+                                    <input type="text" id="prompt" name="prompt" class="form-control" placeholder="enter prompt"/>
+                                </div>
+                                <br/>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#submissionModal">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <h4>get started in a flash with BoilerBox</h4>
+            <div class="container my-4">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="p-5 mb-4 rounded-3 border">
+                            <div class="form-group">
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Choose File
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <li><button class="dropdown-item" type="button" data-filename="llama_console.py">llama-index console</button></li>
+                                        <li><button class="dropdown-item" type="button" data-filename="file2">Another action</button></li>
+                                        <li><button class="dropdown-item" type="button" data-filename="file3">Something else here</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br/>
+                            <a href="" id="downloadLink"><button type="button" class="btn btn-danger">Download</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+          <h4>Use sentiment analysis tools and services</h4>
+          <div class="container my-4">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="p-5 mb-4 rounded-3 border">
+                        <form method="POST" enctype="multipart/form-data" action="/llama-content">
+                            <div class="form-group">
+                                <label for="prompt"></label>
+                                <input type="text" id="prompt" name="prompt" class="form-control" placeholder="enter prompt"/>
+                            </div>
+                            <br/>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#submissionModal">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="modal fade" id="submissionModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Response</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                GPT response content will be displayed here.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sign Up</button>
+                <button type="button" class="btn btn-primary" id="confirmSubmit">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(0);
+        background-color: black;
+    }
+</style>
+<script>
+    document.getElementById('confirmSubmit').addEventListener('click', function() {
+        var form = document.querySelector('form');
+        form.submit(); // Submit the form
+    });
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', function() {
+            var filename = this.getAttribute('data-filename');
+            var downloadLink = document.getElementById('downloadLink');
+            downloadLink.href = `/download_plate/${filename}`;
+            var dropdownButton = document.getElementById('dropdownMenuButton');
+            dropdownButton.textContent = this.textContent;
+        });
+    });
+</script>
+{% endblock %}
