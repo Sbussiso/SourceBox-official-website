@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br/>
+<br/>
+<h1 align="center">Updates</h1>
+<br>
+<p align="center">Dynamic content uploaded from admin here</p>
+{% for update in all_updates %}
+<div class="card">
+  <div class="card-header">Platform Update</div>
+  <div class="card-body">
+      <h5 class="card-title">{{ update.title }}</h5>
+      <p class="card-text">{{ update.content }}</p>
+  </div>
+</div>
+<br/>
+{% endfor %}
+{% endblock %}

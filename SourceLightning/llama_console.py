@@ -1,7 +1,9 @@
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 import openai
 import os
-openai.api_key = "OPENAI_API_KEY"
+from dotenv import load_dotenv
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 documents = SimpleDirectoryReader("data").load_data()
 index = VectorStoreIndex.from_documents(documents)

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% block content %}
+<br/>
+<h1 align="center">Dashboard</h1>
+<p align="center">Welcome {{ current_user.username }}!</p>
+<br/>
+
+<div class="card">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Premium coming soon</h5>
+      <p class="card-text">Get details about the upcoming premium offerings.</p>
+      <a href="/premium_info" class="btn btn-primary">Info</a>
+    </div>
+</div>
+
+<div>
+  <br/>
+  <h2>Recent Activity</h2>
+  <!--TODO: dynamicaly display recent activity-->
+  <br/>
+  <div class="row container-fluid">
+  {% for item in last_5_history_items %}
+    {% if item.action == "entered wikidoc" %}
+      <div class="col container">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Wikidoc</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Launch</a>
+            <a href="#" class="card-link">Run locally</a>
+          </div>
+        </div>
+      </div>
+    {% elif item.action == "entered codedoc" %}
+      <div class="col container">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Codedoc</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Launch</a>
+            <a href="#" class="card-link">Run locally</a>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+  {% else %}
+    <p>No recent activity found.</p>
+  {% endfor %}
+  </div>
+
+</div>
+<br/>
+
+<div class="row container-fluid">
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Settings</h5>
+        <p class="card-text">Access your user settings here</p>
+        <a href="/user_settings" class="card-link">Settings</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Demos and Services</h5>
+        <p class="card-text">Access demos and services here</p>
+        <a href="/content" class="card-link">Content</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
