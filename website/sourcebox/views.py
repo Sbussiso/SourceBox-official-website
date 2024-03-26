@@ -38,7 +38,7 @@ def dashboard():
     seen_actions = set()
     unique_filtered_items = []
     for item in all_history_items:
-        if item.action in ("entered wikidoc", "entered codedoc") and item.action not in seen_actions:
+        if item.action in ("entered wikidoc", "entered codedoc", "entered source-lightning", "entered pack-man", "entered source-mail") and item.action not in seen_actions:
             unique_filtered_items.append(item)
             seen_actions.add(item.action)
     
@@ -71,12 +71,27 @@ def content():
 @views.route('/content/wikidoc')
 @login_required
 def launch_wikidoc():
-    return redirect(url_for('demos.wikidoc'))
+    return redirect(url_for('service.wikidoc'))
 
 @views.route('/content/codedoc')
 @login_required
 def launch_codedoc():
-    return redirect(url_for('demos.codedoc'))
+    return redirect(url_for('service.codedoc'))
+
+@views.route('/content/source-lightning')
+@login_required
+def launch_source_lightning():
+    return redirect(url_for('service.source_lightning'))
+
+@views.route('/content/pack-man')
+@login_required
+def launch_pack_man():
+    return redirect(url_for('service.pack_man'))
+
+@views.route('/content/source-mail')
+@login_required
+def launch_source_mail():
+    return redirect(url_for('service.source_mail'))
 
 
 

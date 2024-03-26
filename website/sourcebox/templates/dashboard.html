@@ -25,24 +25,60 @@
   {% for item in last_5_history_items %}
     {% if item.action == "entered wikidoc" %}
       <div class="col container">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">Wikidoc</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Launch</a>
+            <a href="/content/wikidoc" class="card-link">Launch</a>
             <a href="#" class="card-link">Run locally</a>
           </div>
         </div>
       </div>
     {% elif item.action == "entered codedoc" %}
       <div class="col container">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">Codedoc</h5>
             <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Launch</a>
+            <a href="/content/codedoc" class="card-link">Launch</a>
+            <a href="#" class="card-link">Run locally</a>
+          </div>
+        </div>
+      </div>
+    {% elif item.action == "entered source-lightning" %}
+      <div class="col container">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Source-Lightning</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/content/source-lightning" class="card-link">Launch</a>
+            <a href="#" class="card-link">Run locally</a>
+          </div>
+        </div>
+      </div>
+    {% elif item.action == "entered pack-man" %}
+      <div class="col container">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Pack-Man</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/content/pack-man" class="card-link">Launch</a>
+            <a href="#" class="card-link">Run locally</a>
+          </div>
+        </div>
+      </div>
+    {% elif item.action == "entered source-mail" %}
+      <div class="col container">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">SourceMail</h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">Demo</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="/content/source-mail" class="card-link">Launch</a>
             <a href="#" class="card-link">Run locally</a>
           </div>
         </div>

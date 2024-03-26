@@ -26,12 +26,12 @@ def create_app():
     from website.sourcebox.views import views
     from website.authentication.auth import auth
     from website.admin.admin import admin
-    from website.demos.demos import demos
+    from website.services.services import service
 
     app.register_blueprint(views, url_prefix='/')
     app.register_blueprint(auth, url_prefix='/')
     app.register_blueprint(admin, url_prefix='/')
-    app.register_blueprint(demos, url_prefix='/demos')
+    app.register_blueprint(service, url_prefix='/service')
     
 
     from .models import User
