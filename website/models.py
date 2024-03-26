@@ -27,17 +27,6 @@ class UserHistory(db.Model):
         return f'<UserHistory {self.user_id} {self.action}>'
 
 
-#class Descriptions(db.Model):
-    #id = db.Column(db.Integer, primary_key=True)
-    #description_id = db.Column(db.Integer, db.ForeignKey(''))
-    #title = db.Column(db.String(256), nullable=False)
-    #description = db.Column(db.String(256), nullable=False)
-
-#class PackMan(db.Model):
-#   id = db.Column(db.Integer, primary_key=True)
-    #TODO: set up Pack-Man model
-    #TODO: link to user
-
 
 # admin update tool for updates.html
 class PlatformUpdates(db.Model):
