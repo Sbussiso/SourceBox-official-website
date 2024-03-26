@@ -10,12 +10,11 @@
         <div class="col-md-9"> <!-- Adjusted to span 3 columns like the cards below -->
             <div class="card">
                 <div class="card-header">
-                    Username
+                    {{current_user.username}}
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Premium status:</h5>
-                    <p class="card-text">Email: </p>
-                    <p class="card-text">Total Compute: </p>
+                    <h5 class="card-title">Premium status: {{current_user.premium_status}}</h5>
+                    <p class="card-text">Email: {{current_user.email}} </p>
                 </div>
             </div>
         </div>
