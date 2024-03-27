@@ -17,12 +17,16 @@
 <div class="container text-center">
     <div class="row">
         <div class="col">
-            <h1>All open source, ready out of the box!</h1>
-            <p>(some quote and/or mission statement)</p>
-            <a href="/dashboard"><button type="button" class="btn btn-primary">Dashboard</button></a>
+            <h1 class="open-sans-sourcebox-font display-2">Open source. Local. Powered by SourceBox.</h1>
+            <br/>
+            <p class="open-sans-sourcebox-font">Build, Customize, and Run LLM applications that work right out of the box!</p>
+            <br/>
+            <a href="/dashboard"><button type="button" class="btn btn-primary btn-lg">Dashboard</button></a>
         </div>
     </div>
 </div>
+<br/>
+<br/>
 <br/>
 <br/>
 <div class="container">
@@ -30,7 +34,7 @@
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Whats new?</h5>
+                    <h5 class="card-title open-sans-sourcebox-font">Whats new?</h5>
                     <p class="card-text">Check here for updates on improvements and upcoming content!</p>
                     <a href="/updates" class="btn btn-primary">See what's new</a>
                 </div>
@@ -39,7 +43,7 @@
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Services</h5>
+                    <h5 class="card-title open-sans-sourcebox-font">Services</h5>
                     <p class="card-text">Use SourceBox to quickly chat with chatbots using your own custom data, data analysis, and more!</p>
                     <a href="/content" class="btn btn-primary">Try Demos</a>
                 </div>
@@ -48,7 +52,7 @@
         <div class="col-md-3">
             <div class="card" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 class="card-title">Documentation</h5>
+                    <h5 class="card-title open-sans-sourcebox-font">Documentation</h5>
                     <p class="card-text">Look through the SourceBox documentation to get started, get help, and more!</p>
                     <a href="/docs" class="btn btn-primary">Open Docs</a>
                 </div>
@@ -65,7 +69,7 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="p-5 mb-4 rounded-3 border">
+                        <div class="p-5 mb-4 rounded-3 border box-color">
                             <form method="POST" enctype="multipart/form-data" action="/llama-content">
                                 <div class="form-group">
                                     <label for="fileToUpload" class="p-4">Fetch your data:</label>
@@ -86,7 +90,7 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="p-5 mb-4 rounded-3 border">
+                        <div class="p-5 mb-4 rounded-3 border box-color">
                             <div class="form-group">
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
@@ -111,7 +115,7 @@
           <div class="container my-4">
             <div class="row">
                 <div class="col-md-8 offset-md-2">
-                    <div class="p-5 mb-4 rounded-3 border">
+                    <div class="p-5 mb-4 rounded-3 border box-color">
                         <form method="POST" enctype="multipart/form-data" action="/llama-content">
                             <div class="form-group">
                                 <label for="prompt"></label>
@@ -154,39 +158,6 @@
     </div>
 </div>
 
-<style>
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        filter: invert(0);
-        background-color: black;
-    }
-
-    /*video background CSS*/
-    .video-background {
-        position: relative;
-        width: 100%;
-        height: 20vh; /* Adjust based on your needs */
-        overflow: hidden;
-        border-radius: 15px; /* This rounds the corners of the container */
-        z-index: 1; /* Added to create a new stacking context */
-    }
-    
-    .video-background video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -1;
-        transform: translate(-50%, -50%);
-        background-size: cover;
-        /* Remove border-radius here as it's not necessary if the container clips the content */
-    }
-  
-      
-</style>
 <script>
     document.getElementById('confirmSubmit').addEventListener('click', function() {
         var form = document.querySelector('form');
