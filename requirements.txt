@@ -159,7 +159,7 @@ keyring @ file:///croot/keyring_1678999217139/work
 kiwisolver @ file:///work/ci_py311/kiwisolver_1676827230232/work
 langchain==0.1.12
 langchain-community==0.0.28
-langchain-core==0.1.32
+langchain-core==0.1.35
 langchain-text-splitters==0.0.1
 langsmith==0.1.29
 lazy-object-proxy @ file:///work/ci_py311/lazy-object-proxy_1676827255418/work
