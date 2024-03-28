@@ -30,14 +30,14 @@
 
 
 
-.open-sans-sourcebox-font {
+h1, h2, h3, h4, h5, h6, p {
     font-family: 'Open Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400; /* You can change this to 800 or any other weight you've loaded */
     font-style: normal;
     font-variation-settings:
     "wdth" 100;
-  }
+}
 
 
 .background-color {
@@ -51,4 +51,19 @@
 /*whats new, services, etc*/
 .box-color2 {
     background-color: #faf7fc;
+}
+
+
+
+/* Make carousel initially invisible */
+.invisible-carousel {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Smooth transition for fading in */
+.fade-in {
+    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
