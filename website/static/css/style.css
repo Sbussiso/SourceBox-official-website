@@ -94,6 +94,19 @@ h1, h2, h3, h4, h5, h6, p, div {
 
 
 /*landing pitch content transiton*/
-.col.fs-4 {
+.col.fs-4 p {
     transition: all 0.7s ease-in-out;
+}
+
+
+/*highlights top cars on landing page on mouse hover*/
+.highlighted {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a shadow for highlight effect */
+    transform: scale(1.02); /* Slightly increase size */
+    transition: all 0.3s ease-in-out; /* Make the transform smooth */
+    z-index: 10; /* Ensure the card is above other content */
+}
+.card:hover svg {
+    transition: all 0.7s ease-in-out;
+    transform: scale(1.5); /* Scale the SVG to 150% of its size */
 }

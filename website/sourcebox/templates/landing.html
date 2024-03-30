@@ -32,7 +32,7 @@
 <br/>
 <br/>
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center invisible-section">
         <div class="col-md-3"> <!--goes to /updates-->
             <div class="card box-color3 rounded-5 border-dark">
                 <div class="card-body">
@@ -40,9 +40,9 @@
                     <br/>
                     <p class="card-text" align="center">Check here for updates on improvements and upcoming content!</p>
                     <div align="right" class="p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <a href="/updates"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
+                        </svg></a>
                     </div>
                     
                 </div>
@@ -55,9 +55,9 @@
                     <br/>
                     <p class="card-text" align="center">Quickly chat with LLM's using your own custom data, data analysis, and more!</p>
                     <div align="right" class="p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <a href="/content"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
+                        </svg></a>
                     </div>
                 </div>
             </div>
@@ -69,9 +69,9 @@
                     <br/>
                     <p class="card-text" align="center">Look through the SourceBox documentation to get started, get help, and more!</p>
                     <div align="right" class="p-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                        <a href="/docs"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
-                        </svg>
+                        </svg></a>
                     </div>
                 </div>
             </div>
@@ -94,7 +94,7 @@
         <img class="img" src="{{ url_for('static', filename='images/hybrid-solutions.PNG') }}" alt="diagram of a hybrid cloud solution using a local model">
       </div>
       <div class="col fs-4">
-        <p class="border border-dark rounded-4 p-3">The future of LLM's is local not cloud! SourceBox embraces both Hybrid and Local aproaches to LLM's and Machine learning solutions. SourceBox aims to provide many of the benefits of a cloud service without sacraficing the privacy, security, and compliance of a local system only you control.</p>
+        <p class="border border-dark rounded-4 p-3">The future of LLM's is local not cloud! SourceBox embraces both Hybrid and Local aproaches to LLM's and Machine learning solutions. SourceBox aims to provide many of the benefits of a cloud service without sacraficing the privacy, security, and compliance of a local system only you control. </p>
         <a href="#" class="btn btn-primary"><h4>Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
           </svg></h4></a>
@@ -161,7 +161,7 @@
 <div class="container invisible-section">
     <div class="row box-color2 p-3 rounded-4">
       <div class="col fs-4">
-        <p class="border border-dark rounded-4 p-3">Build and deploy dynamic RAG (Retreival Augmented Generation) data with Pack-Man <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
+        <p class=" border border-dark rounded-4 p-3">Build and deploy dynamic RAG (Retreival Augmented Generation) data with Pack-Man <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
             <path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434zM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21zM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"/>
           </svg> the SourceBox data package manager. Move RAG data between models and services with ease customizing and personalizing your LLM applications.</p>
           <a href="#" class="btn btn-primary"><h3>Launch <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
@@ -293,7 +293,7 @@
 <br/>
 <br/>
 <div class="container text-center">
-    <div class="box-color3 rounded-4 p-3 border border-dark">
+    <div class="box-color3 rounded-4 p-3 border border-dark invisible-section">
         <h2>Powered by the best open source solutions</h2>
         <br/>
         <div class="container text-center">
@@ -339,6 +339,7 @@
     });
     
     $(document).ready(function() {
+        
         // Function to check if the element is in viewport
         function isElementInView(element) {
             var elementTop = $(element).offset().top;
@@ -369,16 +370,30 @@
         $(window).scroll();
     
         // Border appearance on hover for text columns
-        $('.col.fs-4').hover(
+        $('.col.fs-4 p').hover(
             function() {
                 // Mouse enters column area
-                $(this).addClass('border border-primary rounded box-color3 fs-3 rounded-4').removeClass('fs-4');
+                $(this).addClass('box-color3 fs-3').removeClass('fs-4');
+
             }, 
             function() {
                 // Mouse leaves column area
-                $(this).removeClass('border border-primary rounded box-color3 fs-3 rounded-4').addClass('fs-4');
+                $(this).removeClass('box-color3 fs-3').addClass('fs-4');
+
             }
         );
+
+        $('.card').hover(
+            function() {
+                // Mouse enters the card area
+                $(this).addClass('highlighted');
+            },
+            function() {
+                // Mouse leaves the card area
+                $(this).removeClass('highlighted');
+            }
+        );
+
     
         $('#confirmSubmit').click(function() {
             $('form').submit(); // Submit the form
