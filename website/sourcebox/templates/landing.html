@@ -311,11 +311,11 @@
         $('.col.fs-4').hover(
             function() {
                 // Mouse enters column area
-                $(this).addClass('border border-primary rounded');
+                $(this).addClass('border border-primary rounded fs-3').removeClass('fs-4');
             }, 
             function() {
                 // Mouse leaves column area
-                $(this).removeClass('border border-primary rounded');
+                $(this).removeClass('border border-primary rounded fs-3').addClass('fs-4');
             }
         );
     
