@@ -14,8 +14,11 @@
                     Featured
                 </div>
                 <div class="card-body box-color3">
-                    <h5 class="card-title">Why Premium?</h5>
-                    <p class="card-text border border-dark p-3">Get the most out of SourceBox and fund free projects for others. SourceBox is a platform dedicated to providing free open source solutions. By signing up you are supporting the growth of our platform and ongoing maintenance of our applications and services.</p>
+                    <h4 class="card-title">Why Premium?</h4>
+                    <br/>
+                    <hr/>
+                    <p class="card-text p-3 rounded-2">Get the most out of SourceBox and fund free projects for others. SourceBox is a platform dedicated to providing free open source solutions. By signing up you are supporting the growth of our platform and ongoing maintenance of our applications and services.</p>
+                    <hr/>
                 </div>
             </div>
         </div>
@@ -30,8 +33,9 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="p-5 mb-4 rounded-3 border">
+                        <div class="p-5 mb-4 rounded-3 border box-color3 border border-dark">
                             <h2>Never worry about losing your data again</h2>
+                            <hr/>
                             <p>With premium your data is optionally stored in our secure database</p>
                         </div>
                     </div>
@@ -42,8 +46,9 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="p-5 mb-4 rounded-3 border">
+                        <div class="p-5 mb-4 rounded-3 border box-color3 border border-dark">
                             <h2>Get priority support before everyone else</h2>
+                            <hr/>
                             <p>With premium, your needs come first.</p>
                         </div>
                     </div>
@@ -54,8 +59,9 @@
             <div class="container my-4">
                 <div class="row">
                     <div class="col-md-8 offset-md-2">
-                        <div class="p-5 mb-4 rounded-3 border">
+                        <div class="p-5 mb-4 rounded-3 border box-color3 border border-dark">
                             <h2>Higher data limits</h2>
+                            <hr/>
                             <p>LLMs are naturally very data expensive. With premium, you get to use more!</p>
                         </div>
                     </div>
@@ -78,20 +84,31 @@
 <div class="container"> <!-- Start container for comparison section -->
     <div class="row justify-content-center"> <!-- Row for centering comparison cards -->
         <div class="col-md-3"> <!-- Column for Basic card -->
-            <div class="card" style="width: 18rem;">
+            <div class="card rounded-5 border box-color3 border border-dark" style="width: 18rem;">
                 <div class="card-body" align="center">
                     <h5 class="card-title">Basic</h5>
-                    <p class="card-text">temporary data storage</p>
-                    <p class="card-text">limited support</p>
+                    <div class="border border-dark p-3 rounded-5">
+                        <p class="card-text">temporary data storage</p>
+                        <p class="card-text">limited support</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="col-md-3 mb-5"> <!-- Column for Premium card -->
-            <div class="card" style="width: 18rem;">
-                <div class="card-body" align="center">
+            <div class="card rounded-5 border box-color3 border border-dark" style="width: 18rem;">
+                <div class="card-body">
                     <h5 class="card-title">Premium</h5>
-                    <p class="card-text">SourceBox data storage</p>
-                    <p class="card-text">Priority customer support</p>
+                    <div class="border border-dark p-3 rounded-5">
+                        <ul>
+                            <li class="card-text">SourceBox data storage</li>
+                        </ul>
+                        <hr/>
+                        <ul>
+                            <li class="card-text">Priority customer support</li>
+                        </ul>
+                        <hr/>
+                        
+                    </div>
                 </div>
             </div>
             <br/>
@@ -119,20 +136,6 @@
         </div>
     </div>
 </div>
+<script src="{{ url_for('static', filename='js/premium_info.js') }}"></script>
 
-<script>
-    document.getElementById('confirmSubmit').addEventListener('click', function() {
-        var form = document.querySelector('form');
-        form.submit(); // Submit the form
-    });
-    document.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', function() {
-            var filename = this.getAttribute('data-filename');
-            var downloadLink = document.getElementById('downloadLink');
-            downloadLink.href = `/download_plate/${filename}`;
-            var dropdownButton = document.getElementById('dropdownMenuButton');
-            dropdownButton.textContent = this.textContent;
-        });
-    });
-</script>
 {% endblock %}
