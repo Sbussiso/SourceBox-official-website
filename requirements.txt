@@ -344,7 +344,7 @@ toolz
 tornado
 tqdm
 traitlets
-transformers==4.36.0
+transformers==4.38.0
 truststore
 Twisted
 typing_extensions==4.11.0
